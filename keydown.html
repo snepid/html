@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    .box{
+      width:100px;
+      height:100px;
+        background:#69f;
+        position: relative;
+        top: 200px; left: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  
+  <script>
+    var box = document.querySelector(".box");
+    var boxTop = 200;
+    var boxLeft = 200; 
+    window.addEventListener("keydown", ent);
+    
+    function ent(e){
+      console.log(e.keyCode);
+      if(e.keyCode == 38){
+        boxTop = boxTop - 10
+        box.style.top = boxTop+"px";
+        box.innerHTML = "위";
+      }
+      if(e.keyCode == 40){
+        boxTop = boxTop + 10
+        box.style.top = boxTop+"px";
+        box.innerHTML = "아래";
+      }
+      if(e.keyCode == 37){
+        boxLeft = boxLeft - 10
+        box.style.left = boxLeft+"px";
+        box.innerHTML = "좌";
+      }
+      if(e.keyCode == 39){
+        boxLeft = boxLeft + 10
+        box.style.left = boxLeft+"px";
+        box.innerHTML = "우";
+      }
+      box.style.background = "#ffa";
+    }
+  </script>  
+</body>
+</html>

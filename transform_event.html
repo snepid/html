@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .box{
+        width:100px;
+        height: 100px;
+        background: #777;
+        transition: .6s;
+    }
+    .btn{
+        width:100px;
+        height: 100px;
+        background: #777;
+        border-radius: 50%;
+    }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="btn"></div>
+
+    <script>
+        var box =document.querySelector(".box")
+        var btn =document.querySelector(".btn")
+
+        btn.addEventListener("click", go)
+        btn.addEventListener("mouseover", over)
+        btn.addEventListener("mouseout", out)
+        function go(){
+            box.style.transform = "translate(200px, 50px) scale(2,2) rotate(180deg)"
+            box.style.transition
+        }
+        function over(){
+            box.style.transform = "translate(200px, 50px) scale(2,2) rotate(180deg)"
+            box.style.transition
+        }
+        function out(){
+            box.style.transform = "translate(0,0)"
+            box.style.transition
+        }
+    </script>
+</body>
+</html>

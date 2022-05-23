@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: #ffa;
+            position: relative;
+            top: 200px; left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+   <script>
+       var box = document.querySelector(".box")
+       var bt = 200
+       var bl = 200
+       window.addEventListener("wheel", ent);
+
+       function ent(e){
+        console.log(e.wheelDelta);
+        if(e.wheelDelta == 120){
+        bl = bl + 10;
+        box.style.left = bl+"px";
+            box.innerHTML = "좌";
+        }
+        if(e.wheelDelta == 120){
+        bl = bl - 10;
+        box.style.left = bl+"px";
+            box.innerHTML = "우";
+        }
+        if(e.wheelDelta == 120){
+        bt = bt + 10;
+        box.style.top = bt+"px";
+            box.innerHTML = "위로";
+        }
+        if(e.wheelDelta == -120){
+        bt = bt - 10;
+        box.style.top = bt+"px";
+            box.innerHTML = "아래로";
+        }
+        }
+   </script> 
+</body>
+</html>
